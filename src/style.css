@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background: #242331; */
+  /* background: #D4E09B; */
+  /* background: #1B2845; */
+  /* background: black; */
+  /* background: #011638; */
+  background: #2B2D42;
+  /* background: #242331; */
+ font-family: 'Space Mono', monospace;
+ font-weight: 100;
+}
+
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.content {
+  z-index: 1;
+  width: 40%;
+  /* min-height: 4000px; */
+  background: #808A9F;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+
+  background: rgba(214, 237, 255, .1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.right-col {
+  min-width: 20%;
+}
+
+.title {
+  padding-top: 10px;
+  font-size: 60px;
+}
+
+.subitle {
+  padding-top: 30px;
+  font-size: 25px;
+  padding-bottom: 13px;
+  border-bottom: 0.5px solid white;
+}
+
+.text {
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+/* RIGHT COLUMN */
+
+.slogan {
+  /* background: rgba(214, 237, 255, .1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); */
+  border-radius: 5px;
+  color: white;
+  background: #808A9F;
+  border: white solid 1px;
+}
+
+.slogan .text {
+  padding: 10px 15px;
+}
+
+.slogan .text p {
+  padding: 0;
+  margin: 0;
+}
+.btn-block {
+  display: flex;
+  flex-direction: column;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+.btn {
+  margin-top: 5px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border-bottom: white solid 1px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.list {
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list .item {
+  background: #808A9F;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  /* height: 40px; */
+
+}
+
+.tippy-box[data-theme~='tomato'] {
+  background-color: #F5F0F6;
+  color:#2B2D42
+  /* color: yellow; */
+  /* display: none; */
+  /* padding: 5px;
+  border-radius: 5px; */
+}
+
+.tippy-box[data-theme~='tomato'][data-placement^='top']>.tippy-arrow::before {
+  border-top-color: #F5F0F6;
+}
+
+.tippy-box[data-theme~='tomato'][data-placement^='bottom']>.tippy-arrow::before {
+  border-bottom-color: #F5F0F6;
+}
+
+.tippy-box[data-theme~='tomato'][data-placement^='left']>.tippy-arrow::before {
+  border-left-color: #F5F0F6;
+}
+
+.tippy-box[data-theme~='tomato'][data-placement^='right']>.tippy-arrow::before {
+  border-right-color: #F5F0F6;
+}
+
+/* ТАЙМЛАЙН */
+
+
+.container {
+  margin-top: 60px;
+  display: flex;
+}
+
+.lines {
+  margin-left: 40px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background: #D1D6E6;
+  border-radius: 7px;
+}
+
+.line {
+  height: 96px;
+  width: 2px;
+  background: #D1D6E6;
+  margin-left: 5.3px;
+} 
+
+.cards {
+  margin-left: 12px;
+  transform: translateY(-45px);
+}
+
+.card {
+  max-width: 320px;
+  min-height: 100px;
+  padding-right: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  background-color: #808A9F;
+}
+
+.card h4 {
+  margin-left: 25px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.card p {
+  padding: 0;
+  margin: 0;
+  margin-left: 25px;
+}
+       
+.arctitect {
+  z-index: 20;
+  margin: 10px;
+  height: 97vh;
+  background: #808A9F;
+  padding: 20px;
+  box-sizing: border-box;
+  /* background-color: #EAEFBD; */
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.architecture-img {
+  margin-top: 40px;
+  width: 70%;
+  margin-left: 15%;
+}
+
+@media (max-width: 1000px) {
+
+  .canvas {
+    visibility: hidden;
+  }
+
+  .main {
+    flex-wrap: wrap-reverse;
+  }
+
+  .content {
+    min-width: 100%;
+  }
+
+  .arctitect {
+    display: none;
+  }
+
+  .main {
+    margin-top: 60vh;
+  }
+
+  .slogan {
+    display: none;
+  }
+
+  .lines {
+    margin-left: 0px;
+  }
+
+  .btn {
+    margin-left: 0px;
+    margin-right: auto;
+  }
+
+  .btn-block {
+    margin-bottom: 20px;
+  }
+}
