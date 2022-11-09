@@ -33,13 +33,6 @@ OrbitControls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enabled = true
 
-/*------------------------------
-Helpers
-------------------------------*/
-// const gridHelper = new THREE.GridHelper(10, 10);
-// scene.add(gridHelper);
-// const axesHelper = new THREE.AxesHelper(5);
-// scene.add(axesHelper);
 
 /*------------------------------
 Models
@@ -74,10 +67,6 @@ const animate = function () {
   if (tree.isAcrive) {
     tree.particlesMaterial.uniforms.uTime.value = clock.getElapsedTime()
   }
-
-  // if (ground.isAcrive) {
-  //   ground.particlesMaterial.uniforms.uTime.value = clock.getElapsedTime()
-  // }
 };
 animate();
 
@@ -98,7 +87,6 @@ function onMouseMove(e) {
 
   gsap.to(scene.rotation, {
     y: gsap.utils.mapRange(0, window.innerWidth, .5, -.5, x),
-    // x: gsap.utils.mapRange(0, window.innerWidth, .5, -.5, y)
   })
 }
 
